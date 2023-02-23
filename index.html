@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Bazar</title>
+    <link rel="icon" type="image/x-icon" href="./img/shopping-bag.png">
+</head>
+
+<body>
+
+    <script src="https://kit.fontawesome.com/0818cb3b83.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <div class="wrapper">
+        <section class="left">
+
+            <a class="font-semibold font-x-large flex justify-center mt-3 gap"
+                style="text-decoration: none; color:black" href="#">
+                <img src="./img/shopping-bag.png" class="h-auto logo" alt="Bazar">Bazar</a>
+
+            <ul class="mt-5 flex-col justify-center">
+                <li><a href="index.html" class="mt-3 flex items-center"><i class="fa-solid fa-industry"></i> All Category</a></li>
+                <li><a href="#" class="mt-3 flex items-center"><i class="fa-solid fa-house"></i> Home & Cleaning</a></li>
+                <li><a href="#" class="mt-3 flex items-center"><i class="fa-solid fa-briefcase-medical"></i> Beauty & Health</a></li>
+                <li><a href="#" class="mt-3 flex items-center"><i class="fa-solid fa-burger"></i> Food</a></li>
+                <li><a href="#" class="mt-3 flex items-center"><i class="fa-solid fa-paw"></i> Pet Care</a></li>
+                <li><a href="#" class="mt-3 flex items-center"><i class="fa-solid fa-print"></i> Office Products</a> </li>
+                <li><a href="#" class="mt-3 flex items-center"><i class="fa-solid fa-baby-carriage"></i> Baby Care</a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="right">
+            <section class="header">
+                <form class="mx-4 py-3">
+                    <div class="header-left">
+                        <div class="searchbar-top">
+                            <input class="text-sm pe-5 ps-2" type="text" placeholder="Search for item or brands">
+                        </div>
+                    </div>
+                    <div class="header-right">
+                        <a href><i class="fa-solid fa-cart-shopping px-3 text-muted"></i></a>
+                        <button onclick="document.getElementById('id01').style.display='block'"
+                            class="login-button text-sm">Login</button>
+                        <button onclick="document.getElementById('id02').style.display='block'"
+                            class="login-button text-sm" id="">Register</button>
+                        <div id="id01" class="modal">
+
+                            <form class="modal-content animate" action="" method="post">
+
+                                <div class="container">
+                                    <Label class="text-center"><span style="font-size: 1.25rem;"><b>Login</b></span>
+                                    <input class="mt-4" type="text" placeholder="Username" name="uname" required>
+                                    <input type="password" placeholder="Password" name="psw" required>
+                                    <button class="main-login-button" type="submit">Login</button>
+
+                                    <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                                        class="cancelbtn">Cancel</button>
+                                    <span class="" style="font-weight: 400;">New User? </span> 
+                                    <button style="border: none;background-color: white;font-weight: bold;" onclick="reg()">Register Now</button>
+                                    </Label>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="id02" class="modal">
+
+                            <div class="container">
+                                <Label class="text-center"><span style="font-size: 1.25rem;"><b>Sign Up</b></span>
+                                <input class="mt-4" type="text" placeholder="First Name" name="uname" required>
+                                <input type="text" placeholder="Last Name" name="uname" required>
+                                <input type="text" placeholder="Username" name="uname" required>
+                                <input type="password" placeholder="Password" name="psw" required>
+                                <button class="main-login-button" id="register" type="submit">Register</button>
+                                </Label>
+                                <button type="button" onclick="document.getElementById('id02').style.display='none'"
+                                    class="cancelbtn">Cancel</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+            <section class="slider">
+                <form action="">
+                    <input class="searchbar-middle text-sm" type="text" placeholder="Search for items of brands">
+                </form>
+            </section>
+
+            <section class="products mx-4 py-3">
+                <h4 class="font-semibold">Featured Product</h4>
+                <div class="product-group flex mt-4">
+                    <div class="product flex-col">
+                        <div class="product-img flex justify-center">
+                            <a href="#">
+                                <img src="./img/products/lichi.png" alt="">
+                            </a>
+                        </div>
+
+                        <div class="product-description flex-col">
+                            <a href="#" class="black font-500 mb-2">Rajshahi Lichi</a>
+                            <span class="mb-2">$ 100</span>
+                            <button type="button" class="btn btn-primary">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product flex-col">
+                        <div class="product-img flex justify-center">
+                            <a href="#">
+                                <img src="./img/products/banana.png" alt="">
+                            </a>
+                        </div>
+
+                        <div class="product-description flex-col">
+                            <a href="#" class="black font-500 mb-2">Banana</a>
+                            <span class="mb-2">$ 50</span>
+                            <button type="button" class="btn btn-primary">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product flex-col">
+                        <div class="product-img flex justify-center">
+                            <a href="#">
+                                <img src="./img/products/dragon.png" alt="">
+                            </a>
+                        </div>
+
+                        <div class="product-description flex-col">
+                            <a href="#" class="black font-500 mb-2">Dragon Fruit</a>
+                            <span class="mb-2">$ 500</span>
+                            <button type="button" class="btn btn-primary">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product flex-col">
+                        <div class="product-img flex justify-center">
+                            <a href="#">
+                                <img src="./img/products/guava.png" alt="">
+                            </a>
+                        </div>
+
+                        <div class="product-description flex-col">
+                            <a href="#" class="black font-500 mb-2">Guava</a>
+                            <span class="mb-2">$ 80</span>
+                            <button type="button" class="btn btn-primary">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product flex-col">
+                        <div class="product-img flex justify-center">
+                            <a href="#">
+                                <img src="./img/products/mango.png" alt="">
+                            </a>
+                        </div>
+
+                        <div class="product-description flex-col">
+                            <a href="#" class="black font-500 mb-2">Rajshahi Mango</a>
+                            <span class="mb-2">$ 120</span>
+                            <button type="button" class="btn btn-primary">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product flex-col">
+                        <div class="product-img flex justify-center">
+                            <a href="#">
+                                <img src="./img/products/orange.png" alt="">
+                            </a>
+                        </div>
+
+                        <div class="product-description flex-col">
+                            <a href="#" class="black font-500 mb-2">Darjeeling Orange</a>
+                            <span class="mb-2">$ 150</span>
+                            <button type="button" class="btn btn-primary">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product flex-col">
+                        <div class="product-img flex justify-center">
+                            <a href="#">
+                                <img src="./img/products/watermelon.png" alt="">
+                            </a>
+                        </div>
+
+                        <div class="product-description flex-col">
+                            <a href="#" class="black font-500 mb-2">Watermelon</a>
+                            <span class="mb-2">$ 70</span>
+                            <button type="button" class="btn btn-primary">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product flex-col">
+                        <div class="product-img flex justify-center">
+                            <a href="#">
+                                <img src="./img/products/strawberry.png" alt="">
+                            </a>
+                        </div>
+
+                        <div class="product-description flex-col">
+                            <a href="#" class="black font-500 mb-2">Strawberry</a>
+                            <span class="mb-2">$ 110</span>
+                            <button type="button" class="btn btn-primary">Add to Cart</button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <footer class="footer-area mt-4 font-400">
+                <div class="footer-middle py-3 text-center">
+                    <p>Developed By <span> <a href="https://sites.google.com/diu.edu.bd/srijonashraf">Srijon Ashraf</a></span></p>
+                </div>
+
+            </footer>
+
+        </section>
+
+
+    </div>
+
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Get the modal
+        var newmodal = document.getElementById('id02');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == newmodal) {
+                newmodal.style.display = "none";
+            }
+        }
+
+        function reg(){
+            document.getElementById('id02').style.display = "block";
+            document.getElementById('id01').style.display = "none";
+        }
+
+    </script>
+
+</body>
+
+</html>
