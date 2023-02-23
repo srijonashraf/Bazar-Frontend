@@ -1,2 +1,2 @@
 # Grocery-Application-Frontend
-Live Site:
+Live Site: https://srijonashraf.github.io/Bazar-Frontend/
